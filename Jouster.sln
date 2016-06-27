@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{DE19D4A0-AE34-9A77-B94A-A1466E03EF0F}") = "Jouster", "Assembly-CSharp.csproj", "{83709849-F173-54D3-EDC2-E9606AFA02EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83709849-F173-54D3-EDC2-E9606AFA02EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83709849-F173-54D3-EDC2-E9606AFA02EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83709849-F173-54D3-EDC2-E9606AFA02EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83709849-F173-54D3-EDC2-E9606AFA02EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
