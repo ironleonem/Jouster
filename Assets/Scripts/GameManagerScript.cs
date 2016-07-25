@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour {
 
 	public GameObject levelBlock;
+
+	//Controls whether or not the player is alive
+	private bool isPlayerAlive = true;
 
 	// Use this for initialization
 	void Start () {
@@ -12,11 +16,12 @@ public class GameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(!isPlayerAlive && Input.GetKeyDown(KeyCode.Return)){
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+		}
 	}
 
-	//Controls whether or not the player is alive
-	private bool isPlayerAlive = true;
+
 
 	public bool getPlayerAlive ()
 	{

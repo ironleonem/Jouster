@@ -47,6 +47,6 @@ public class nextSpawnHandler : MonoBehaviour {
 	void DoSpawn()
 	{
 		int picker = Random.Range (0, arrayLevelBlocks.Length);
-		Instantiate (arrayLevelBlocks [picker], endTrans.position, endTrans.rotation);
+		Instantiate (arrayLevelBlocks [picker], endTrans.position - new Vector3(2f,0,0), endTrans.rotation);
 	}
 }

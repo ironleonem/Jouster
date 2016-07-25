@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float thisThrust;
 	public playStats statHolder;
 	public GameObject thisLance;
+	public Transform groundCheck;
+	public float jumpThrust = 10;
 
 	bool lanceState = false;
 	public float lanceCost;
@@ -36,14 +38,19 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void CheckingJump(){
-		if (Input.GetKeyDown ("space")) {
+		if (Input.GetKeyDown ("space") && Physics.OverlapSphere(groundCheck.position, 0.02f).Length > 0) {
 			float playerEnergy = statHolder.getEnergy();
 			if (playerEnergy > 10) 
 			{
-				thisRigid.AddForce (Vector3.up * thisThrust);
+				//thisRigid.AddForce (Vector3.up * thisThrust);
+				thisRigid.velocity = Vector3.up  * jumpThrust;
 				statHolder.setEnergy (-10);
 			}
 
+		}
+
+		if(Input.GetKeyUp ("space") && thisRigid.velocity.y > (jumpThrust / 2)  && Physics.OverlapSphere(groundCheck.position, 0.02f).Length == 0){
+			thisRigid.velocity = Vector3.up  * jumpThrust / 2;
 		}
 	}
 
@@ -129,6 +136,7 @@ public class PlayerController : MonoBehaviour {
 	public void killPlayer ()
 	{
 		Debug.Log ("Player has died!");
+		GameObject.FindObjectOfType<GameManagerScript> ().setPlayerAlive(false);
 		Destroy (gameObject);
 	}
 } 
