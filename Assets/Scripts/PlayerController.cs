@@ -5,12 +5,15 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody thisRigid;
 	private Transform thisTrans;
+	private Vector3 m_forwardVelocity;
 	private Vector3 startPos;
 	[SerializeField] private float thisThrust;
 	public playStats statHolder;
 	public GameObject thisLance;
 	public Transform groundCheck;
 	public float jumpThrust = 10;
+	public float m_forwardSpeed = 1.0f;
+
 
 	bool lanceState = false;
 	public float lanceCost;
@@ -21,14 +24,19 @@ public class PlayerController : MonoBehaviour {
 		thisTrans = gameObject.GetComponent<Transform> ();
 		startPos = thisTrans.position;
 
+		m_forwardVelocity = new Vector3(m_forwardSpeed, 0.0f);
+		thisRigid.velocity = m_forwardVelocity;
+		Debug.Log("Velocity at start "+thisRigid.velocity);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//StandardizePosition ();
+		//thisRigid.velocity = m_forwardVelocity;
 		CheckingJump();
 		checkDeath ();
 		CheckingAttack ();
+		Debug.Log("Velocity "+thisRigid.velocity);
 
 	}
 
@@ -43,14 +51,14 @@ public class PlayerController : MonoBehaviour {
 			if (playerEnergy > 10) 
 			{
 				//thisRigid.AddForce (Vector3.up * thisThrust);
-				thisRigid.velocity = Vector3.up  * jumpThrust;
+				thisRigid.velocity =  m_forwardVelocity + (Vector3.up  * jumpThrust);
 				statHolder.setEnergy (-10);
 			}
 
 		}
 
 		if(Input.GetKeyUp ("space") && thisRigid.velocity.y > (jumpThrust / 2)  && Physics.OverlapSphere(groundCheck.position, 0.02f).Length == 0){
-			thisRigid.velocity = Vector3.up  * jumpThrust / 2;
+			thisRigid.velocity = m_forwardVelocity + (Vector3.up  * jumpThrust / 2);
 		}
 	}
 
