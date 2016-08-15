@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 
 		m_forwardVelocity = new Vector3(m_forwardSpeed, 0.0f);
 		thisRigid.velocity = m_forwardVelocity;
-		Debug.Log("Velocity at start "+thisRigid.velocity);
+
 	}
 	
 	// Update is called once per frame
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 		CheckingJump();
 		checkDeath ();
 		CheckingAttack ();
-		Debug.Log("Velocity "+thisRigid.velocity);
+		//Debug.Log("Velocity "+thisRigid.velocity);
 
 	}
 
@@ -137,6 +137,9 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log ("Died from Y");
 			killPlayer ();
 		
+		}else if(thisRigid.velocity.x <= 0){
+			Debug.Log ("Died from Collision");
+			killPlayer ();
 		}
 			
 	}
@@ -146,5 +149,6 @@ public class PlayerController : MonoBehaviour {
 		Debug.Log ("Player has died!");
 		GameObject.FindObjectOfType<GameManagerScript> ().setPlayerAlive(false);
 		Destroy (gameObject);
+		UnityEngine.SceneManagement.SceneManager.LoadScene("main");
 	}
 } 

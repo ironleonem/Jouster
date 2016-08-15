@@ -11,6 +11,7 @@ public class nextSpawnHandler : MonoBehaviour {
 	//Finds the EndPoint transform
 
 	private Transform endTrans;
+	private playStats stats;
 
 	public GameObject[] arrayLevelBlocks;
 
@@ -18,9 +19,11 @@ public class nextSpawnHandler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameManager = GameObject.FindObjectOfType<GameManagerScript> ();
+		stats = gameManager.GetComponent<playStats>();
 		thisTrans = gameObject.GetComponent<Transform> ();
 		targTrans = gameManager.GetComponent<Transform> ();
 		endTrans = transform.GetChild (0);
+
 	}
 	
 	// Update is called once per frame
@@ -30,11 +33,13 @@ public class nextSpawnHandler : MonoBehaviour {
 
 	void checkSpawn()
 	{
+//		Debug.Log(hasSpawned+". "+endTrans.position.x+" < "/*+stats.spawnerLocation.position.x+" = "+(endTrans.position.x < stats.spawnerLocation.position.x)*/);
+//		Debug.Log(stats.spawnerLocation);
 		if (!hasSpawned) {
-			float thisX = thisTrans.position.x;
-			float targX = targTrans.position.x;
+			//float thisX = thisTrans.position.x;
+			//float targX = targTrans.position.x;
 
-			if (thisX < targX) 
+			if(endTrans.position.x < stats.spawnerLocation.position.x)//if (thisX < targX) 
 			{
 				hasSpawned = true;
 				DoSpawn ();

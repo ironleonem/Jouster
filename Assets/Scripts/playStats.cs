@@ -13,6 +13,8 @@ public class playStats : MonoBehaviour {
 	public Text coinText;
 	public bool energyInUse = false;
 
+	public Transform spawnerLocation;// { get; private set; }
+	public Transform despawnerLocation;//  { get; private set; }
 
 	// Use this for initialization
 	void Awake (){
