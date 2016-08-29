@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/offScreenKiller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/nextSpawnHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/offScreenKiller.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/nextSpawnHandler.cs" Line="37" Column="38" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="138" Column="18" />
+      <File FileName="Assets/Scripts/offScreenKiller.cs" Line="18" Column="2" />
       <File FileName="Assets/CameraScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/playStats.cs" Line="17" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
