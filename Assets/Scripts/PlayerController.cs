@@ -144,6 +144,10 @@ public class PlayerController : MonoBehaviour {
 			
 	}
 
+	public void damagePlayer(){
+		Debug.Log("Damaged player!");
+	}
+
 	public void killPlayer ()
 	{
 		Debug.Log ("Player has died!");
