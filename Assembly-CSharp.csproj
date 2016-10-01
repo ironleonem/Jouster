@@ -47,10 +47,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\CoinController.cs" />
+     <Compile Include="Assets\Scripts\DroppingEnemy.cs" />
+     <Compile Include="Assets\Scripts\EnemyMeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ShootingEnemy.cs" />
+     <Compile Include="Assets\Scripts\StabbingEnemy.cs" />
      <Compile Include="Assets\Scripts\blockMovingLogic.cs" />
      <Compile Include="Assets\Scripts\nextSpawnHandler.cs" />
      <Compile Include="Assets\Scripts\offScreenKiller.cs" />
