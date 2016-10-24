@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour {
 	public playStats statHolder;
 	public GameObject thisLance;
 	public Transform groundCheck;
-	public float jumpThrust = 10;
-	public float m_forwardSpeed = 1.0f;
-	public float m_lanceSpeedMultiplier = 2.0f;
+	private float jumpThrust = 10;
+	private float m_forwardSpeed = 1.0f;
+	private float m_lanceSpeedMultiplier = 2.0f;
 
 
 	bool lanceState = false;
@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour {
 		thisRigid.velocity = new Vector3(m_forwardSpeed, 0.0f);
 		// = m_forwardVelocity;
 
+		jumpThrust = statHolder.jumpThrust;
+		m_forwardSpeed = statHolder.m_forwardSpeed;
+		m_lanceSpeedMultiplier = statHolder.m_lanceSpeedMultiplier;
 	}
 	
 	// Update is called once per frame

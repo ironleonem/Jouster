@@ -13,6 +13,10 @@ public class playStats : MonoBehaviour {
 	public Text coinText;
 	public bool energyInUse = false;
 
+	public float jumpThrust = 10;
+	public float m_forwardSpeed = 1.0f;
+	public float m_lanceSpeedMultiplier = 2.0f;
+
 	public Transform spawnerLocation;// { get; private set; }
 	public Transform despawnerLocation;//  { get; private set; }
 
