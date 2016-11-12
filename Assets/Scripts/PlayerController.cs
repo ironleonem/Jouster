@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	private float jumpThrust = 10;
 	private float m_forwardSpeed = 1.0f;
-	private float m_lanceSpeedMultiplier;// = 2.0f;
+	private float m_lanceSpeedMultiplier = 2.0f;
 
 
 	bool lanceState = false;
@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour {
 		jumpThrust = statHolder.jumpThrust;
 		m_forwardSpeed = statHolder.m_forwardSpeed;
 		m_lanceSpeedMultiplier = statHolder.m_lanceSpeedMultiplier;
-		//Debug.Log("Setting speed to "+statHolder.m_forwardSpeed);
 	}
 	
 	// Update is called once per frame

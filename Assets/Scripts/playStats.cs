@@ -17,9 +17,6 @@ public class playStats : MonoBehaviour {
 	public float m_forwardSpeed = 1.0f;
 	public float m_lanceSpeedMultiplier = 2.0f;
 
-	public float u_xVelocity = -7;
-	public float u_yVelocity = 10;
-
 	public Transform spawnerLocation;// { get; private set; }
 	public Transform despawnerLocation;//  { get; private set; }
 
