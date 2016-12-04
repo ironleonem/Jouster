@@ -6,6 +6,8 @@ public class GameManagerScript : MonoBehaviour {
 
 	public GameObject levelBlock;
 
+	public GameObject[] LevelBlocks;
+
 	//Controls whether or not the player is alive
 	private bool isPlayerAlive = true;
 
@@ -21,7 +23,10 @@ public class GameManagerScript : MonoBehaviour {
 		}
 	}
 
-
+	public void AddLevelBlock(Transform t){
+		int picker = Random.Range (0, LevelBlocks.Length);
+		Instantiate (LevelBlocks [picker], t.position - new Vector3(2f,0,0), t.rotation);
+	}
 
 	public bool getPlayerAlive ()
 	{

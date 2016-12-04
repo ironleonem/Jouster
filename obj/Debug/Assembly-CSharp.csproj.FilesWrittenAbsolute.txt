@@ -1,0 +1,17 @@
+/Users/mjpattie/Jouster/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/mjpattie/Jouster/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/mjpattie/Jouster/obj/Debug/Assembly-CSharp.dll
+/Users/mjpattie/Jouster/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/mjpattie/Jouster/Temp/bin/Debug/UnityEngine.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/UnityEditor.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Mono.Cecil.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Unity.DataContract.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/mjpattie/Jouster/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/mjpattie/Jouster/Temp/bin/Debug/Mono.Cecil.Mdb.dll

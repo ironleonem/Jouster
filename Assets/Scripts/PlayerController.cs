@@ -159,8 +159,8 @@ public class PlayerController : MonoBehaviour {
 	public void killPlayer ()
 	{
 		Debug.Log ("Player has died!");
-		GameObject.FindObjectOfType<GameManagerScript> ().setPlayerAlive(false);
-		Destroy (gameObject);
-		UnityEngine.SceneManagement.SceneManager.LoadScene("main");
+//		GameObject.FindObjectOfType<GameManagerScript> ().setPlayerAlive(false);
+//		Destroy (gameObject);
+//		UnityEngine.SceneManagement.SceneManager.LoadScene("main");
 	}
 } 
